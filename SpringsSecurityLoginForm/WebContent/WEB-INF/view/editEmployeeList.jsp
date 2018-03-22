@@ -10,7 +10,7 @@
  <h2 id="banner" align="center">Employee Management System</h2>	<hr/>
  
  <h4><a href="/SpringsSecurityLoginForm/list">View Employees</a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="<c:url value='j_spring_security_logout'/>">Logout</a></h4>
+  <a href="<c:url value='/logout'/>">Logout</a></h4>
 <form:form method="post" action="edit" commandName="employee">
  <center>
     <table>
@@ -49,10 +49,7 @@
     <tr>
         <td><form:label path="departmentid"><spring:message code="label.departmentid"/></form:label></td>
         <td><form:input path="departmentid" /></td>
-    </tr>
-    
-
-    
+    </tr>   
 </table> 
 <br>
 <table>

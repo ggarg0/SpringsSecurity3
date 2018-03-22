@@ -1,5 +1,7 @@
 package com.springs.security.controller;
 
+import java.security.Principal;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -8,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.springs.security.entity.EmployeeEntity;
 import com.springs.security.service.EmployeeManager;
@@ -62,10 +65,23 @@ public class EditEmployeeController {
 		return "login";
 	}
 
+	/*
+	 * @RequestMapping(value = "/accessdenied", method = RequestMethod.GET) public
+	 * String loginerror(ModelMap model) { model.addAttribute("error", "true");
+	 * return "denied"; }
+	 */
+
 	@RequestMapping(value = "/accessdenied", method = RequestMethod.GET)
-	public String loginerror(ModelMap model) {
-		model.addAttribute("error", "true");
-		return "denied";
+	public ModelAndView accesssDenied(Principal user) {
+
+		ModelAndView model = new ModelAndView();
+		if (user != null) {
+			model.addObject("msg", "Hi " + user.getName() + ", you do not have permission to access this page!");
+		} else {
+			model.addObject("msg", "Invalid username/password, please try again.");
+		}
+		model.setViewName("login");
+		return model;
 	}
 	
 	@RequestMapping(value = "/addEmp", method = RequestMethod.GET)

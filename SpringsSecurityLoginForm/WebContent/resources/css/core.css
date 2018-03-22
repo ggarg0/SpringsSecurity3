@@ -1,0 +1,46 @@
+.checkbox-inline label, .radio-inline label{
+  font-weight: normal;
+}
+
+.top30 { margin-top:30x; }
+.top50 { margin-top:50px; }
+.top100 { margin-top:100px; }
+.top150 { margin-top:150px; }
+.top250 { margin-top:250px; }
+.top500 { margin-top:500px; }
+
+.bottom20 { margin-bottom:20px; }
+.bottom50 { margin-bottom:50px; }
+.bottom100 { margin-bottom:100px; }
+.bottom150 { margin-bottom:150px; }
+.bottom250 { margin-bottom:250px; }
+.bottom500 { margin-bottom:500px; }
+
+.right20 { margin-right:20px; }
+.right50 { margin-right:50px; }
+.right100 { margin-right:100px; }
+.right150 { margin-right:150px; }
+.right250 { margin-right:250px; }
+.right500 { margin-right:500px; }
+
+.left5 { margin-left:5px; }
+.left20 { margin-left:20px; }
+.left50 { margin-left:50px; }
+.left100 { margin-left:100px; }
+.left150 { margin-left:150px; }
+.left250 { margin-left:250px; }
+.left500 { margin-left:500px; }
+
+.login-margin { 	
+	margin-top:25px; 
+	margin-bottom:30px;	
+}
+
+.button-margin { 	
+	margin-top:50px; 
+	margin-bottom:50px;	
+	margin-right:50px; 
+	margin-left:50px;	
+}
+
+.table-responsive {height:600px;}

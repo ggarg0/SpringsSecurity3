@@ -1,18 +1,25 @@
-<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <html>
 <head>
     <title>Employee Management</title>
+	<spring:url value="/resources/css/core.css" var="coreCss" />
+	<spring:url value="/resources/css/bootstrap.min.css" var="bootstrapCss" />
+	<link href="${bootstrapCss}" rel="stylesheet" />
+	<link href="${coreCss}" rel="stylesheet" />
 </head>
+
 <body>
  
  <h2 id="banner" align="center">Employee Management System</h2>	<hr/>
  <h4><a href="addEmp">Add Employee</a>&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="<c:url value='j_spring_security_logout'/>">Logout</a></h4>
 
+<div class="container">
 <c:if  test="${!empty employeeList}">
-<table class="data" border="1">
+
+<table class="table table-striped">
 <tr>
     <th>Employee Id</th>
     <th>First Name</th>
@@ -40,7 +47,9 @@
     </tr>
 </c:forEach>
 </table>
+
 </c:if>
- </center>
+</div>
+
 </body>
 </html>

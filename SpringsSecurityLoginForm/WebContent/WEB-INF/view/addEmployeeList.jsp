@@ -4,6 +4,8 @@
 <html>
 <head>
     <title>Employee Management</title>
+    <spring:url value="/resources/css/bootstrap.min.css" var="mainCss" />
+	<link href="${mainCss}" rel="stylesheet" />
 </head>
 <body>
  
